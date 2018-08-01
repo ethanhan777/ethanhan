@@ -3,7 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import {
+  AppComponent,
+  appComponentSelector
+} from './app.component';
+import {
+  componentSelectors,
+  ComponentsModule,
+} from './components/components.module';
+import { MoleculesModule } from './molecules/molecules.module';
+import { AtomsModule } from './atoms/atoms.module';
+import { ServicesModule } from './services/services.module';
+
+export const entryComponentSelectors = [...componentSelectors];
 
 @NgModule({
   declarations: [
@@ -12,9 +24,18 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ServicesModule,
+    AtomsModule,
+    MoleculesModule,
+    ComponentsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: appComponentSelector, useValue: AppComponent },
+  ],
+  // entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  // ngDoBootstrap() {}
+}

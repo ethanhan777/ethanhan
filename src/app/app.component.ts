@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
+export const appComponentSelector = 'app-root';
+
 @Component({
-  selector: 'app-root',
+  selector: appComponentSelector,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Ethan Han - Web Developer';
-  subtitle = 'Making awesome things on the internet';
+  subtitle = 'Create awesome things on the internet';
 }
