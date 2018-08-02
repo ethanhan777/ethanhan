@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 #menu {
-  width: 600px;
-  padding-top: 20px;
+  width: 100%;
+  padding-top: 30px;
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -300px;
+  // left: 50%;
+  // margin-left: -300px;
   z-index: 3;
   text-align: center;
   -webkit-animation: fadeInDown .6s 0.5s ease both;
@@ -17,11 +18,11 @@
 }
 
 .logo {
-  width: 235px;
-  height: 45px;
+  width: 175px;
+  height: 135px;
   position: absolute;
   left: 50%;
-  margin-left: -117.5px;
+  margin-left: -87.5px;
   background: url(../assets/images/logo.svg) no-repeat;
   background-size: 100%;
   text-indent: 100%;
@@ -29,8 +30,39 @@
   overflow: hidden;
 }
 
+.nav {
+  position: absolute;
+  right: 30px;
+  font-size: 35px;
+  display: inline-block;
+  cursor: pointer;
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #eee;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+.nav.change{
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .bar2 {
+    opacity: 0;
+  }
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+
+
 #header {
-  background: no-repeat center right fixed url(../assets/images/test.jpg);
+  background: no-repeat top center fixed url(../assets/images/background.jpg);
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   -o-background-size: 100%;
@@ -39,17 +71,18 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale')";
-  // filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/images/background.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/images/background.jpg', sizingMethod='scale');
   margin-bottom: 0px;
   padding: 0px;
   color: inherit;
   background-color: #eee;
   height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
 
   .container {
     position: relative;
-    top: 28%;
+    top: 55%;
     z-index: 4;
     text-align: center;
     max-width: 100%;
@@ -57,7 +90,17 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    color: #FFF;
+    color: #eee;
+  }
+
+  .content-arrow {
+    z-index: 4;
+    color: #eee;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
   }
 
   .overlay {
@@ -73,14 +116,23 @@
   }
 
   h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    // font-weight: lighter;
+    font-size: 2.5em;
     padding-bottom: 20px;
     border-bottom: 1px solid #fff;
     border-bottom-color: rgba(255,255,255,0.35);
     display: inline-block;
   }
+  .var {
+    color: skyblue;
+  }
+  .str {
+    color: orange;
+  }
 }
 
 p {
-  margin: 0 0 10px
+  margin: 0 0 10px;
+  font-size: 1.25em;
 }
