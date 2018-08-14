@@ -1,5 +1,8 @@
 <div id="menu">
-  <div class="logo">LOGO</div>
+  <div class="logo">
+    <div class="image"></div>
+    <h2 class="slogan">{{'{'}}EthanHan{{'}'}}</h2>
+  </div>
 
   <div
   class="nav container"
@@ -14,11 +17,16 @@
 <header id="header">
   <div class="container">
     <h1>
-		<span class="var">$ethan_han</span> = 
-		<span class="str">'Web Developer'</span>;
-	</h1>
+      <span class="var">$ethan_han</span> = 
+      <span class="str">'Web Developer'</span>;
+    </h1>
 
-    <p>{{subtitle}}</p>
+    <div class="connect">
+      <p>{{subtitle}}</p>
+      <a href="https://www.linkedin.com/in/ethanhan" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ethanhan777" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.drupal.org/u/ethanhan777" target="_blank"><i class="fab fa-drupal"></i></a>
+    </div>
   </div>
 
   <a [ngx-scroll-to]="'#content'" class="content-arrow">

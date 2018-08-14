@@ -9,7 +9,6 @@ export const appComponentSelector = 'app-root';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //title = '$ethan_han = \'Web Developer\';';
   subtitle = 'Create awesome things on the internet';
   faChevronDown = faChevronDown;
   menuStatus = false;
