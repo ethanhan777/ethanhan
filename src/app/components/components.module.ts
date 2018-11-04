@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { AtomsModule } from '../atoms/atoms.module';
 import { MoleculesModule } from '../molecules/molecules.module';
 import { ServicesModule } from '../services/services.module';
 
-import { profileSelector, ProfileComponent } from './profile/profile.component';
-import { skillsSelector, SkillsComponent } from './skills/skills.component';
+import { headerSelector, HeaderComponent } from './header/header.component';
 import { projectsSelector, ProjectsComponent } from './projects/projects.component';
-import { contactSelector, ContactComponent } from './contact/contact.component';
+import { aboutSelector, AboutComponent } from './about/about.component';
+import { thoughtsSelector, ThoughtsComponent } from './thoughts/thoughts.component';
 
 export const componentSelectors = [
-  profileSelector,
-  skillsSelector,
+  headerSelector,
   projectsSelector,
-  contactSelector
+  aboutSelector,
+  thoughtsSelector
 ];
 const declarations = [
-  ProfileComponent,
-  SkillsComponent,
+  HeaderComponent,
   ProjectsComponent,
-  ContactComponent
+  ThoughtsComponent,
+  AboutComponent
 ];
 
 @NgModule({
@@ -29,15 +30,16 @@ const declarations = [
     AtomsModule,
     MoleculesModule,
     ServicesModule,
+    RouterModule,
   ],
   exports: [...declarations],
   entryComponents: [...declarations],
   declarations,
   providers: [
-    { provide: profileSelector, useValue: ProfileComponent },
-    { provide: skillsSelector, useValue: SkillsComponent },
+    { provide: headerSelector, useValue: HeaderComponent },
+    { provide: aboutSelector, useValue: AboutComponent },
     { provide: projectsSelector, useValue: ProjectsComponent },
-    { provide: contactSelector, useValue: ContactComponent }
+    { provide: thoughtsSelector, useValue: ThoughtsComponent }
   ],
 })
 export class ComponentsModule {}

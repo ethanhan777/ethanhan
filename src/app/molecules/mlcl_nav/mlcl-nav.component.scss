@@ -1,0 +1,46 @@
+@import '~styles/variables.scss';
+@import '~styles/layout.scss';
+
+nav {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin-top: 2em;
+
+    @include breakpoint ($mediumScreen) {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    a {
+        font-family: $fontHeading;
+        font-weight: 300;
+        font-size: 1.25em;
+        text-transform: uppercase;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $colorBase;
+        text-decoration: none;
+
+        &.active span.indicator {
+            background-color: $colorAccent;
+        }
+        &:hover span.indicator {
+            background: none;
+            border: 1px solid $colorAccent;
+        }
+    }
+
+    span.indicator {
+        background-color: $colorBase;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        border-radius: 50%;
+        margin-top: 10px;
+        transition: all 0.5s;
+    }
+}

@@ -1,0 +1,19 @@
+@import "~styles/variables.scss";
+
+h1#page-title {
+    font-family: $fontHeading;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding: 0 1em;
+    font-family: $fontParagraph;
+    font-weight: 300;
+    font-size: 1em;
+}

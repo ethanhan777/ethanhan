@@ -6,14 +6,15 @@ import {
 } from '@angular/core';
 // import { Subscriber } from 'rxjs/Subscriber';
 
-export const skillsSelector = 'skills';
+export const headerSelector = 'my-header';
 
 @Component({
-  selector: skillsSelector,
-  templateUrl: './skills.component.html',
+  selector: headerSelector,
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 @Injectable()
-export class SkillsComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit, OnDestroy {
   // private subscriptions = new Subscriber();
 
   constructor() {}

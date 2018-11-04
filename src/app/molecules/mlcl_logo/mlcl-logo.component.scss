@@ -1,0 +1,32 @@
+@import '~styles/variables.scss';
+
+#logo {
+    display: flex;
+    align-items: center;
+    color: $colorBase;
+    text-decoration: none;
+
+    h1 {
+        font-family: $fontLogo;
+        margin: 0;
+        font-size: 2.5em;
+        line-height: 1em;
+    }
+    p {
+        font-family: $fontHeading;
+        font-weight: 300;
+        margin: 0;
+        font-size: 1.2em;
+        text-transform: uppercase;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cover {
+        width: 42px;
+        height: auto;
+        margin-right: 7px;
+    }
+}

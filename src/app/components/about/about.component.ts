@@ -6,14 +6,15 @@ import {
 } from '@angular/core';
 // import { Subscriber } from 'rxjs/Subscriber';
 
-export const contactSelector = 'contact';
+export const aboutSelector = 'about';
 
 @Component({
-  selector: contactSelector,
-  templateUrl: './contact.component.html',
+  selector: aboutSelector,
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
 @Injectable()
-export class ContactComponent implements OnInit, OnDestroy {
+export class AboutComponent implements OnInit, OnDestroy {
   // private subscriptions = new Subscriber();
 
   constructor() {}

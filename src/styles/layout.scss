@@ -1,0 +1,18 @@
+@import '~breakpoint-sass';
+
+$smallScreen: 25.875em; // 414px
+$mediumScreen: 48em; // 768px
+$largeScreen: 64em; // 1024px
+$giantScreen: 90em; // 1440px
+
+.container {
+    display: block;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    @include breakpoint ($largeScreen) {
+        max-width: $largeScreen;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
