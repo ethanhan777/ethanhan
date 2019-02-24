@@ -1,4 +1,5 @@
 @import '~styles/variables.scss';
+@import '~styles/layout.scss';
 
 #logo {
     display: flex;
@@ -9,24 +10,30 @@
     h1 {
         font-family: $fontLogo;
         margin: 0;
-        font-size: 2.5em;
-        line-height: 1em;
+        font-size: 1.725em;
+        line-height: 0.8em;
+
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+
+        @include breakpoint ($smallScreen) {
+            font-size: 2.25em;
+        }
     }
-    p {
-        font-family: $fontHeading;
-        font-weight: 300;
-        margin: 0;
-        font-size: 1.2em;
-        text-transform: uppercase;
-    }
+
     img {
         width: 100%;
         height: auto;
     }
 
     .cover {
-        width: 42px;
+        width: 50px;
         height: auto;
-        margin-right: 7px;
+        margin: 0 7px;
+
+        @include breakpoint ($smallScreen) {
+            width: 65px;
+        }
     }
 }

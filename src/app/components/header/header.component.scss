@@ -1,14 +1,12 @@
-@import '~styles/layout.scss';
-
 header {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-
-    @include breakpoint ($mediumScreen) {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+    padding: 10px 0;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
