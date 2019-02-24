@@ -1,8 +1,21 @@
-<!-- <nav>
-  <a routerLink="/about" routerLinkActive="active">About <span class="indicator"></span></a>
-  <a routerLink="/projects" routerLinkActive="active">Projects <span class="indicator"></span></a>
-  <a routerLink="/thoughts" routerLinkActive="active">Thoughts <span class="indicator"></span></a>
-</nav> -->
+<nav
+class="nav-menu"
+[ngClass]="{'is-active': menuActive}">
+  <div class="nav-menu-items">
+    <a 
+    routerLink="/about" 
+    routerLinkActive="active"
+    (click)="menuToggle()">About <span class="indicator"></span></a>
+    <a 
+    routerLink="/projects" 
+    routerLinkActive="active"
+    (click)="menuToggle()">Projects <span class="indicator"></span></a>
+    <a 
+    routerLink="/thoughts" 
+    routerLinkActive="active"
+    (click)="menuToggle()">Thoughts <span class="indicator"></span></a>
+  </div>
+</nav>
 
 <div 
 class="hamburger hamburger--spring"
