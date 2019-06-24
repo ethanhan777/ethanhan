@@ -25,12 +25,12 @@ import { ThoughtsComponent } from './components/thoughts/thoughts.component';
 export const entryComponentSelectors = [...componentSelectors];
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
+  { path: '', component: AboutComponent, pathMatch: 'full' },
   { path: 'projects', component: ProjectsComponent },
   { path: 'thoughts', component: ThoughtsComponent },
-  { path: '**', component: AboutComponent }
+  { path: '**', redirectTo: '' }
 ];
+
 
 @NgModule({
   declarations: [
