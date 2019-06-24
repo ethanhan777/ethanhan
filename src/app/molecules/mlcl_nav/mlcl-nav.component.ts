@@ -1,6 +1,6 @@
 import {
   Component,
-  OnInit,
+  OnInit
 } from '@angular/core';
 
 @Component({
@@ -19,5 +19,12 @@ export class MlclNavComponent implements OnInit {
 
   menuToggle() {
     this.menuActive = !this.menuActive;
+    const containerElements = document.getElementById("blur-container");
+
+    if (this.menuActive) {
+      containerElements.classList.add('nav-active');
+    } else {
+      containerElements.classList.remove('nav-active');
+    }
   }
 }

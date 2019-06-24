@@ -1,0 +1,68 @@
+@import '~styles/variables.scss';
+@import '~styles/layout.scss';
+  
+main {
+    margin: 35px auto;
+    position: relative;
+    padding: 10px 5px;
+    background: hsla(0,0%,50%,.3);
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    line-height: 1.5;
+    border-radius: 10px 10px 0 0;
+    width: 90%;
+    max-width: 650px;
+    box-shadow: 5px 3px 30px black;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+
+    @include breakpoint ($mediumScreen) {
+        width: 60%;
+    }
+}
+  
+main::before {
+    content: '';
+    background: url(/assets/images/background.jpeg) 0 / cover fixed;
+    background-position: center;
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+main.left {    
+    @include breakpoint ($mediumScreen) {
+        width: 40%;
+        margin: 35px 0;
+        border-radius: 0 10px 10px 0;
+        text-align: left;
+    }
+}
+
+main.nav-active {
+    z-index: -1;
+}
+
+blockquote {
+    font-style: italic;
+
+    p {
+        padding: 0;
+    }
+}
+
+footer {
+    padding-top: 20px;
+    font-weight: bold;
+}
+  
+cite {
+    font-style: normal;
+    font-size: 22px;
+}

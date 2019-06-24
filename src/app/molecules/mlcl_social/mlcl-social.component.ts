@@ -11,6 +11,7 @@ import {
 })
 export class MlclSocialComponent implements OnInit {
   @Input() heading: string;
+  @Input() position?: string;
 
   constructor() {}
 

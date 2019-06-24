@@ -1,5 +1,11 @@
 @import "~styles/variables.scss";
 
+body {
+    @include breakpoint ($smallScreen) {
+        background-position: center 89px;
+    }
+}
+
 #page-title {
     font-family: $fontHeading;
     font-size: 2em;
@@ -18,9 +24,10 @@ p {
     font-size: 1em;
 }
 
-.content {
-    text-align: center;
+section {
+    height: 100vh;
+    min-height: 450px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: flex-end;
 }

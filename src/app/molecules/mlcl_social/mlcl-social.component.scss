@@ -4,11 +4,8 @@
 .connect {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 175px;
     margin: 0 auto;
-    @include breakpoint ($smallScreen) {
-        margin: 0;
-    }
 
     a {
         font-size: 1.5em;
@@ -18,5 +15,12 @@
         &:hover {
             color: $colorAccent;
         }
+    }
+}
+.connect.left {
+    margin: 0 auto;
+
+    @include breakpoint ($mediumScreen) {
+        margin: 0;
     }
 }

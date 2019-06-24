@@ -8,11 +8,13 @@ import { AtomsModule } from '../atoms/atoms.module';
 import { MlclLogoComponent } from './mlcl_logo/mlcl-logo.component';
 import { MlclNavComponent } from './mlcl_nav/mlcl-nav.component';
 import { MlclSocialComponent } from './mlcl_social/mlcl-social.component';
+import { MlclBlurContainerComponent } from './mlcl_blur_container/mlcl-blur-container.component';
 
 const declarations = [
   MlclLogoComponent,
   MlclNavComponent,
   MlclSocialComponent,
+  MlclBlurContainerComponent,
 ];
 
 @NgModule({

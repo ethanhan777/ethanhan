@@ -19,6 +19,8 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   constructor() {}
 
+  greeting: string = "Hello, my name is Ethan. I'm a passionate web developer and I like making cool things on the internet.";
+
   ngOnInit() {
     // this.subscriptions.add();
   }

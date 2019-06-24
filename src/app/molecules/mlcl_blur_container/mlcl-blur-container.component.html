@@ -1,0 +1,11 @@
+<main id="blur-container" [ngClass]="position">
+  <blockquote>
+    <h2 
+      *ngIf="title" 
+      id="page-title">{{title}}</h2>
+    <p>{{paragraph}}</p>
+    <mlcl-social 
+      *ngIf="displaySocial"
+      [position]="position"></mlcl-social>
+  </blockquote>
+</main>

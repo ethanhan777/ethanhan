@@ -2,7 +2,7 @@ import {
   Component,
   OnInit,
   OnDestroy,
-  Injectable,
+  Injectable
 } from '@angular/core';
 // import { Subscriber } from 'rxjs/Subscriber';
 
