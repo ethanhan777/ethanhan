@@ -1,12 +1,12 @@
 @import '~styles/variables.scss';
 @import '~styles/layout.scss';
+@import '~styles/common.scss';
   
 main {
     margin: 30px auto;
     position: relative;
     padding: 10px 5px;
     background: hsla(0,0%,100%,.3);
-    font-size: 100%;
     font-family: $fontParagraph;
     line-height: 1.5;
     border-radius: 10px;
@@ -17,7 +17,6 @@ main {
     color: #fff;
     text-align: center;
     transition: all 0.5s;
-    animation: bounce 0.5s ease-in-out;
 
     @include breakpoint ($mediumScreen) {
         width: 60%;
@@ -39,14 +38,20 @@ main::before {
 }
 
 main.left {
-    animation: bounce 0.5s ease-in-out;
+    // animation: slideUp 1s ease-in-out;
 
     @include breakpoint ($mediumScreen) {
         width: 40%;
         margin: 35px 0;
         border-radius: 0 10px 10px 0;
         text-align: left;
-        animation: slideLeft 0.5s ease-in-out;
+        // animation: none;
+    }
+
+    blockquote {    
+        @include breakpoint ($mediumScreen) {
+            animation: slideLeft 0.5s ease-in-out;
+        }
     }
 }
 
@@ -55,30 +60,9 @@ main.nav-active {
 }
 
 blockquote {
+    animation: slideUp 0.5s ease-in-out;
+
     p {
         padding: 0;
     }
-}
-
-footer {
-    padding-top: 20px;
-    font-weight: bold;
-}
-  
-cite {
-    font-style: normal;
-    font-size: 22px;
-}
-
-@keyframes bounce {
-    0%{ -webkit-transform:translateY(0px);}
-    30%{ -webkit-transform:translateY(-20px);}
-    60%{ -webkit-transform:translateY(0px);}
-    70%{ -webkit-transform:translateY(-5px);}
-    100%{ -webkit-transform:translateY(0);}
-}
-
-@keyframes slideLeft {
- from { -webkit-transform:translateX(-30px); }
- to { -webkit-transform:translateX(0px); }
 }

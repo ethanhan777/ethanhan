@@ -25,10 +25,11 @@ import { ThoughtsComponent } from './components/thoughts/thoughts.component';
 export const entryComponentSelectors = [...componentSelectors];
 
 const appRoutes: Routes = [
-  { path: '', component: AboutComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
+  { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'thoughts', component: ThoughtsComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', component: AboutComponent }
 ];
 
 
