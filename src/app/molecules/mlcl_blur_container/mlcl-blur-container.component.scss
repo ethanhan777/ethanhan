@@ -55,6 +55,12 @@ main.left {
     }
 }
 
+main.full {
+    color: #000;
+    min-height: 70vh;
+    margin-top: 120px;
+}
+
 main.nav-active {
     z-index: -1;
 }
