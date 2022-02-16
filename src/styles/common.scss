@@ -50,3 +50,8 @@ section {
     from { -webkit-transform:translateY(50px); }
     to { -webkit-transform:translateY(0px); }
 }
+
+@keyframes slideDown {
+  from { -webkit-transform:translateY(-200px); }
+  to { -webkit-transform:translateY(0px); }
+}
